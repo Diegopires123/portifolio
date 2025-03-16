@@ -839,141 +839,88 @@ footer {
     font-size: 35px;
 }
 
+/* Estilos gerais */
+.menu-mobile {
+    display: none;
+}
+
+.menu-mobile.ativo {
+    display: block;
+}
+
 @media screen and (max-width: 1020px) {
-  
     .flex {
-        flex-direction: column-reverse;
-        /* Organiza os itens em coluna */
-       
+        flex-direction: column;
     }
 
     .menu-desktop {
         display: none;
-        /* Esconde o menu */
     }
 
     .menu-mobile {
         display: block;
-        /* Mostra o menu */
     }
 
     .menu-mobile ul {
         display: flex;
-        /* Organiza os itens lado a lado */
         gap: 20px;
-        /* Espaçamento entre os itens */
         justify-content: center;
-        /* Centraliza os itens */
         padding: 20px 0;
-        /* Espaçamento interno */
     }
 
     .menu-mobile li {
-        display: block;
-        /* Organiza os itens em coluna */
         text-align: center;
-        /* Centraliza o texto */
     }
 
     .menu-mobile a {
         color: #fff;
-        /* Cor do texto */
         text-decoration: none;
-        /* Remove o sublinhado */
         font-size: 1.2em;
-        /* Tamanho do texto */
+        transition: color 0.3s ease-in-out;
     }
 
     .menu-mobile a:hover {
         color: #00ff08;
-        /* Cor do texto no hover */
     }
-    .menu-mobile a {
-        transition: color 0.3s ease-in-out;
-    }
-    .menu-mobile {
-        display: none;
-    }
-    
-    .menu-mobile.ativo {
-        display: block;
-    }
-    
-    
-    
 }
+
 @media screen and (max-width: 768px) {
     .topo-do-site {
-        padding: 20px 10px; /* Reduz espaçamento lateral */
-        text-align: left; /* Alinha o texto à esquerda */
+        padding: 20px 10px;
+        text-align: left;
     }
 
     .topo-do-site .flex {
-        flex-direction: column-reverse; /* Imagem abaixo do texto */
-        align-items: center; /* Centraliza os elementos */
+        flex-direction: column-reverse;
+        align-items: center;
     }
 
-    .topo-do-site-texto h1 {
-        font-size: 1.5em; /* Reduz o tamanho do título */
-        text-align: center; /* Mantém o título centralizado */
-    }
-
-    .topo-do-site-texto p {
-        font-size: 1em; /* Ajusta o tamanho do parágrafo */
-        line-height: 1.5; /* Melhora a legibilidade */
-        text-align: justify; /* Deixa o texto mais organizado */
-        padding: 0 0px; /* Adiciona margem para evitar cortes */
-    }
-
-    .topo-do-site-imagem img {
-        max-width: 90%; /* Ajusta a imagem ao tamanho da tela */
-        height: auto; /* Mantém a proporção */
-    }
-
-    .btn-contato {
-        text-align: center; /* Centraliza o botão */
-        margin-top: 15px;
-    }
-
-    .btn-contato button {
-        font-size: 1em; /* Ajusta o tamanho do botão */
-        padding: 10px 20px; /* Melhora o espaçamento */
-    }
-}
-@media screen and (max-width: 768px) {
-    .topo-do-site {
-        padding: 20px 10px; /* Reduz espaçamento lateral */
-        text-align: left; /* Mantém alinhamento do texto */
-    }
-
-    .topo-do-site .flex {
-        flex-direction: column-reverse; /* Imagem abaixo do texto */
-        align-items: center; /* Centraliza os elementos */
-    }
-
-    .topo-do-site-imagem {
-        display: flex;
-        justify-content: center; /* Centraliza horizontalmente */
-        width: 100%; /* Ocupa toda a largura */
-        margin-top: 15px; /* Espaçamento entre texto e imagem */
-    }
-
-    .topo-do-site-imagem img {
-        max-width: 90%; /* Ajusta a imagem ao tamanho da tela */
-        height: auto; /* Mantém a proporção */
-        display: block; /* Evita espaçamentos indesejados */
+    .topo-do-site-texto {
+        width: 100%;
+        padding: 0 10px;
+        text-align: center;
     }
 
     .topo-do-site-texto h1 {
         font-size: 1.5em;
-        text-align: center; /* Mantém o título centralizado */
     }
 
     .topo-do-site-texto p {
         font-size: 1em;
         line-height: 1.5;
         text-align: justify;
-        padding: 0 10px;
+    }
+
+    .topo-do-site-imagem {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .topo-do-site-imagem img {
+        max-width: 90%;
+        height: auto;
     }
 
     .btn-contato {
@@ -985,68 +932,53 @@ footer {
         font-size: 1em;
         padding: 10px 20px;
     }
+
     .container-2 {
         display: flex;
-        justify-content: center; /* Centraliza os ícones horizontalmente */
-        align-items: center; /* Alinha verticalmente */
-        gap: 20px; /* Espaço entre os ícones */
-        margin-top: 15px; /* Espaço entre os ícones e outros elementos */
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+        width: 100%;
     }
 
     .icone a {
-        font-size: 1.5em; /* Ajusta o tamanho dos ícones para o mobile */
-        color: white; /* Cor padrão dos ícones */
-        transition: color 0.3s ease-in-out; /* Suaviza a transição de cor */
+        font-size: 1.5em;
+        color: white;
+        transition: color 0.3s ease-in-out;
     }
 
     .icone a:hover {
-        color: #00ff08; /* Cor ao passar o mouse */
+        color: #00ff08;
     }
 
     footer {
-        text-align: center; /* Centraliza o conteúdo do rodapé */
-        padding: 20px 10px; /* Ajusta o padding no mobile */
-        background-color: #333; /* Cor de fundo opcional */
-        color: white; /* Cor do texto */
+        text-align: center;
+        padding: 20px 10px;
+        background-color: #333;
+        color: white;
     }
 
     .line-footer p {
-        font-size: 0.9em; /* Reduz o tamanho da fonte para os textos */
-        margin: 5px 0; /* Ajusta o espaçamento entre os textos */
+        font-size: 0.9em;
+        margin: 5px 0;
     }
+    .topo-do-site-texto {
+        display: block; /* Garante que o texto siga o fluxo normal */
+        max-width: 600px; /* Define uma largura fixa semelhante ao "Sobre Mim" */
+        width: 100%; /* Faz com que o elemento ocupe o espaço necessário */
+        margin: 0 auto; /* Centraliza o conteúdo */
+        text-align: justify; /* Mantém o texto justificado */
+    }
+    
+    .topo-do-site-texto p {
+        font-size: 1em; /* Mantém tamanho uniforme */
+        line-height: 1.5; /* Melhora a legibilidade */
+        padding: 0 10px; /* Adiciona espaçamento lateral */
+    }
+    
 }
-@media screen and (max-width: 768px) {
-    .container-2 {
-        display: flex;
-        justify-content: center; /* Centraliza horizontalmente */
-        align-items: center; /* Alinha verticalmente */
-        gap: 15px; /* Espaço entre os ícones */
-        margin-top: 20px; /* Espaço entre os ícones e outros elementos */
-        width: 100%; /* Garante que o container ocupe toda a largura */
-    }
 
-    .icone a {
-        font-size: 1.5em; /* Ajusta o tamanho dos ícones */
-        color: white; /* Cor padrão dos ícones */
-        transition: color 0.3s ease-in-out; /* Suaviza a transição de cor */
-    }
-
-    .icone a:hover {
-        color: #00ff08; /* Cor ao passar o mouse */
-    }
-
-    footer {
-        text-align: center; /* Centraliza o conteúdo do rodapé */
-        padding: 20px 10px; /* Ajusta o padding no mobile */
-        background-color: #333; /* Cor de fundo do rodapé */
-        color: white; /* Cor do texto */
-    }
-
-    .line-footer p {
-        font-size: 0.9em; /* Reduz o tamanho da fonte para os textos */
-        margin: 5px 0; /* Ajusta o espaçamento entre os textos */
-    }
-}
 
 
 
